@@ -14,21 +14,68 @@ const Search_API =
 function App() {
 
   const [movies, setMovies] = useState([]);
+  const [searchTerm, setSearchTerm] = useState('');
+ 
 
+  
   useEffect(  () => {
-    fetch(Featured_API).then(res => res.json()).then(data => {
-      console.log(data);
-      setMovies(data.results);
-    });
     
     
-  }, [])
+    getMovies(Featured_API);
+    
+  }, []);
 
+  const getMovies = ( API) =>{
+    
+    
+            fetch(API)
+            .then((res) => res.json())
+            .then((data) => {
+              console.log(data);
+              setMovies(data.results);
+          });
+        
+  }
+
+  const handleSubmit = (e) =>{
+
+    e.preventDefault();
+
+    if(searchTerm) {
+
+      getMovies(Search_API + searchTerm);
+
+      setSearchTerm('');
+  }
+  else{
+    alert("ENTER THE NAME...");
+  }
+
+  }
+
+  
+  const handleChange = (e) =>{
+
+    setSearchTerm(e.target.value);
+  }
+
+  
 
   return (
         <>
          <header>
-          <input className="search" type="text" placeholder="SEARCH"></input>
+         <img  src='./monkey.png' onClick={getMovies(Featured_API)}></img>
+         <form onSubmit={handleSubmit}>
+         <input className="search" 
+                type="text" 
+                placeholder="SEARCH" 
+                value={searchTerm}
+                onChange={handleChange}
+          
+          >
+          </input>
+         </form>
+          
         </header>
 
             <div className="movie-container">
@@ -39,6 +86,7 @@ function App() {
                   }
       
             </div>
+            
             </>
           );
 }
