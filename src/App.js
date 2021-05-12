@@ -64,7 +64,7 @@ function App() {
   return (
         <>
          <header>
-         <img  src='./monkey.png' onClick={getMovies(Featured_API)}></img>
+         <img  src='./monkey.png'></img>
          <form onSubmit={handleSubmit}>
          <input className="search" 
                 type="text" 
