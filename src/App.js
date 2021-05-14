@@ -48,7 +48,7 @@ function App() {
       setSearchTerm('');
   }
   else{
-    alert("ENTER THE NAME...");
+    alert("ENTER THE NAME... or CLICK 🙉");
   }
 
   }
@@ -58,13 +58,18 @@ function App() {
 
     setSearchTerm(e.target.value);
   }
+  const homeButton = () =>{
+    getMovies(Featured_API);
+  }
 
   
 
   return (
         <>
          <header>
+         <button onClick = {homeButton} >
          <img  src='./monkey.png'></img>
+         </button>
          <form onSubmit={handleSubmit}>
          <input className="search" 
                 type="text" 
