@@ -24,6 +24,8 @@ header{
 header img{
   height: 40px;
   align-content: flex-start;
+  border: 1px solid black;
+
   
 }
 
@@ -52,7 +54,9 @@ header img{
   overflow: hidden;
   position: relative;
   width: 300px ;
+  border-width: 0;
 }
+
 
 .movie img{
 

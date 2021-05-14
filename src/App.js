@@ -67,7 +67,7 @@ function App() {
   return (
         <>
          <header>
-         <button onClick = {homeButton} >
+         <button onClick = {homeButton} style={{border: "2px solid black", borderWidth:"3px"}}>
          <img  src='./monkey.png'></img>
          </button>
          <form onSubmit={handleSubmit}>
