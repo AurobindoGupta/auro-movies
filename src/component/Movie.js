@@ -1,6 +1,6 @@
 import React from 'react';
 
-import CastComponent from './CastComponent';
+import ContentModal from './ContentModal';
 
 
 const Img_API = "https://image.tmdb.org/t/p/w1280";
@@ -18,18 +18,13 @@ const setVoteClass = (vote) =>{
     }
 }
 
-const handleMovieClick = (id) =>{
 
-    return(     
-        CastComponent(id)
-    )
-}
 
 const Movie = ({ title, poster_path, overview, vote_average, id }) => {
 
     return(
-    <div className="movie">
-            <img onClick={()=> handleMovieClick(id)} src={(poster_path)? (Img_API + poster_path)
+    <ContentModal id = {id} >
+            <img src={(poster_path)? (Img_API + poster_path)
             :'https://images.unsplash.com/photo-1599460489872-f2c4dd391ac5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80'}
              alt={ title } />
             <div className="movie-info">
@@ -42,7 +37,7 @@ const Movie = ({ title, poster_path, overview, vote_average, id }) => {
                     <h4>OVERVIEW:</h4>
                     <p>{overview} </p>
             </div>
-    </div>
+    </ContentModal>
 
 )}
 

@@ -57,6 +57,7 @@ header img{
 .movie img{
 
   max-width: 100%;
+  
 }
 
 .movie-container{
@@ -121,4 +122,29 @@ header img{
 }
 .tag.red{
   color: red;
+}
+.container{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cast{
+  padding: 1rem;
+  position: relative;
+  width:200px;
+  
+}
+
+.info{
+ 
+  padding: 1rem;
+  align-items: center;
+ 
+
+}
+.cast img {
+ width: 100%;
+   
+ 
 }
