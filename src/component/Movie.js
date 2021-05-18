@@ -19,7 +19,6 @@ const setVoteClass = (vote) =>{
 }
 
 
-
 const Movie = ({ title, poster_path, overview, vote_average, id }) => {
 
     return(
