@@ -1,3 +1,14 @@
+*About
+
+this is a movie info db app.\
+this is a single page application\
+in this app we have used https://api.themoviedb.org/  API to get the data \
+this app is made using React js, HTML, CSS \
+the link to the deployed app is https://auro-movieapp.netlify.app/
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
